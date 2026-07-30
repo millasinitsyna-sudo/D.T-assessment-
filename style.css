@@ -1,0 +1,26 @@
+h1{
+  font-family: "Merienda", cursive;
+    font-size: 80px;
+    color: #000000;
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #9baea8;
+}
+
+li a {
+  display: block;
+  color: #eeeae7;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #e8e5ae;
+  color: #000000;
