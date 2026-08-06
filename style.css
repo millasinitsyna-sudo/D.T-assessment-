@@ -1,7 +1,7 @@
 h1{
   font-family: "Merienda", cursive;
     font-size: 80px;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -9,14 +9,14 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 140px;
   background-color: #9baea8;
 }
 
 li a {
   display: block;
   color: #eeeae7;
-  padding: 8px 16px;
+  padding: 60px 16px;
   text-decoration: none;
 }
 
@@ -24,3 +24,58 @@ li a {
 li a:hover {
   background-color: #e8e5ae;
   color: #000000;
+}
+
+.heading {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  text-align: center;
+}
+
+#top {
+  text-align: center;
+}
+
+body {
+    background-image:url("the-cleveland-museum-of-art-8wkas5SUHr4-unsplash.jpg");
+    background-size: cover;
+
+}
+
+#info {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    color: #ffffff;
+}
+
+#chinese {
+  display:block;
+  background-color: #9baea8;
+  padding: 10px;
+}
+
+body {
+  margin: 0;
+  background-image: url(url../images/the-cleveland-museum-of-art-8wkas5SUHr4-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+.hero {
+  height: 300px;
+  background-color: #9baea8;
+  background-size: 200px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
