@@ -1,81 +1,95 @@
-h1{
-  font-family: "Merienda", cursive;
+h1 {
+    font-family: "Merienda", cursive;
     font-size: 80px;
     color: #ffffff;
     text-align: center;
+    margin: 0;
+    padding: 20px 0;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 140px;
-  background-color: #9baea8;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px; 
+    background-color: #9baea8;
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    overflow: auto;
 }
 
 li a {
-  display: block;
-  color: #eeeae7;
-  padding: 60px 16px;
-  text-decoration: none;
+    display: block;
+    color: #eeeae7;
+    padding: 30px 20px; 
+    text-decoration: none;
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    text-align: center;
 }
 
 /* Change the link and background color on hover */
 li a:hover {
-  background-color: #e8e5ae;
-  color: #000000;
+    background-color: #e8e5ae;
+    color: #000000;
 }
 
 .heading {
-  display: flex;
-  gap: 100px;
-  align-items: center;
-  text-align: center;
+    margin-left: 200px; 
+    padding: 40px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #top {
-  text-align: center;
+    text-align: center;
 }
 
 body {
-    background-image:url("the-cleveland-museum-of-art-8wkas5SUHr4-unsplash.jpg");
+    margin: 0;
+    background-image: url("images/the-cleveland-museum-of-art-8wkas5SUHr4-unsplash.jpg");
     background-size: cover;
-
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 #info {
-  font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Merriweather", serif;
+    font-weight: 100;
+    font-style: normal;
     color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    background-color: rgba(155, 174, 168, 0.7); /* Semi-transparent so text is readable */
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-#chinese {
-  display:block;
-  background-color: #9baea8;
-  padding: 10px;
+.chinese { 
+    display: block;
+    background-color: rgba(155, 174, 168, 0.5); 
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-body {
-  margin: 0;
-  background-image: url(url../images/the-cleveland-museum-of-art-8wkas5SUHr4-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 400px;
-}
-
+/* Hero section */
 .hero {
-  height: 300px;
-  background-color: #9baea8;
-  background-size: 200px;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
+    height: 400px;
+    background-color: #9baea8;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
