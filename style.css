@@ -68,7 +68,7 @@ body {
     color: #ffffff;
     text-align: center;
     font-size: 24px;
-    background-color: rgba(155, 174, 168, 0.7); /* Semi-transparent so text is readable */
+    background-color: rgba(155, 174, 168, 0.7); 
     padding: 20px 40px;
     border-radius: 10px;
     margin-top: 20px;
@@ -178,11 +178,12 @@ body {
 }
 
 
-/* --- CAROUSEL --- */
+
 .carousel-container {
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     text-align: center;
+    overflow: hidden;
 }
 
 
@@ -190,23 +191,25 @@ body {
     display: none;
 }
 
-.carousel-wrapper {
-    min-height: 180px;
-    position: relative;
+
+.carousel-window {
+    width: 100%;
+    overflow: hidden;
     margin: 20px 0;
 }
 
-.carousel-slide {
-    display: none; 
-    animation: fadeEffect 1s;
-    padding: 0 10px;
+
+.carousel-track {
+    display: flex;
+    width: 300%; 
+    transition: transform 0.5s ease-in-out;
 }
 
 
-#slide1:checked ~ .carousel-wrapper #content1,
-#slide2:checked ~ .carousel-wrapper #content2,
-#slide3:checked ~ .carousel-wrapper #content3 {
-    display: block;
+.carousel-slide {
+    width: 33.333%; 
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .carousel-slide h4 {
@@ -219,15 +222,17 @@ body {
 .carousel-slide .student-quote {
     font-family: "Merriweather", serif;
     color: #eeeae7;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 12px;
     font-style: italic;
 }
 
-/* ARROWS */
+
 .carousel-controls {
     position: relative;
-    margin-top: 10px;
+    height: 40px;
+    margin-top: 15px;
 }
 
 .carousel-btn {
@@ -235,12 +240,12 @@ body {
     top: 0;
     background-color: rgba(0, 0, 0, 0.3);
     color: #eeeae7;
-    padding: 12px 16px;
+    padding: 10px 15px;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    display: inline-block;
+    display: none; 
 }
 
 .carousel-btn:hover {
@@ -248,19 +253,38 @@ body {
     color: #000;
 }
 
-/* Position the arrows */
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
 
 
-#slide1:checked ~ .carousel-controls label[for="slide1"],
-#slide2:checked ~ .carousel-controls label[for="slide2"],
-#slide3:checked ~ .carousel-controls label[for="slide3"] {
-    display: none;
+
+#student1:checked ~ .carousel-window .carousel-track {
+    transform: translateX(0%);
+}
+
+#student2:checked ~ .carousel-window .carousel-track {
+    transform: translateX(-33.333%);
+}
+
+#student3:checked ~ .carousel-window .carousel-track {
+    transform: translateX(-66.666%);
 }
 
 
-@keyframes fadeEffect {
-    from {opacity: 0.4;}
-    to {opacity: 1;}
+#student1:checked ~ .carousel-controls .s1-prev,
+#student1:checked ~ .carousel-controls .s1-next {
+    display: inline-block;
 }
+
+
+#student2:checked ~ .carousel-controls .s2-prev,
+#student2:checked ~ .carousel-controls .s2-next {
+    display: inline-block;
+}
+
+
+#student3:checked ~ .carousel-controls .s3-prev,
+#student3:checked ~ .carousel-controls .s3-next {
+    display: inline-block;
+}
+
